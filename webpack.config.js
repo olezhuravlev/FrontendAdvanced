@@ -10,7 +10,26 @@ module.exports = {
 
     // Start applicaton point:
     entry: {
-        main: path.resolve(__dirname, "src", "index.js"),
+        main: path.resolve(__dirname, "src", "index.ts"),
+    },
+
+    // Loaders configs:
+    module: {
+        rules: [
+            {
+                // Files to be processed by the loader:
+                test: /\.tsx?$/,
+                // Loader name to be used:
+                use: 'ts-loader',
+                // Excepted dir:
+                exclude: /node_modules/,
+            },
+        ],
+    },
+
+    // For not to specify these extensions for imports:
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
     },
 
     // Destination build folder and file:

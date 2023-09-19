@@ -14,3 +14,9 @@ $ mkdir public
 $ touch public/index.html
 $ npm i -D html-webpack-plugin progress-webpack-plugin
 ````
+
+````bash
+$ npm i -D typescript ts-loader
+$ touch tsconfig.json
+````
+

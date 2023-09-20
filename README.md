@@ -32,3 +32,8 @@ $ touch config/build/buildResolvers.ts
 $ touch config/build/buildWebpackConfig.ts
 $ touch config/build/types/config.ts
 ````
+
+````bash
+$ touch config/build/buildDev.server.ts
+$ npm i -D webpack-dev-server
+````

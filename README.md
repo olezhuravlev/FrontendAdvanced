@@ -20,3 +20,6 @@ $ npm i -D typescript ts-loader
 $ touch tsconfig.json
 ````
 
+````bash
+$ npm i -D ts-node @types/node @types/webpack @types/webpack-dev-server
+````

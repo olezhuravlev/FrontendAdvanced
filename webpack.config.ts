@@ -1,9 +1,11 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const ProgressWebpackPlugin = require("progress-webpack-plugin")
-const webpack = require("webpack")
+import path from "path";
+import webpack from "webpack";
+import "webpack-dev-server"
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = {
+const ProgressPlugin = require('progress-webpack-plugin')
+
+const config: webpack.Configuration = {
 
     // development/production:
     mode: "development",
@@ -13,7 +15,7 @@ module.exports = {
         main: path.resolve(__dirname, "src", "index.ts"),
     },
 
-    // Loaders configs:
+    // Loaders' configs:
     module: {
         rules: [
             {
@@ -44,6 +46,8 @@ module.exports = {
                 template: path.resolve(__dirname, "public", "index.html")
             },
         ),
-        new ProgressWebpackPlugin(true)
+        new ProgressPlugin(true),
     ]
 }
+
+export default config;

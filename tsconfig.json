@@ -1,12 +1,28 @@
 {
   "compilerOptions": {
+    // Build destination folder.
     "outDir": "./dist/",
+    "sourceMap": true,
+    // Allow to use variables without explicit type specification.
     "noImplicitAny": true,
-    "module": "es6",
+    // Module code version (ECMAScript standard).
+    "module": "ESNext",
+    // Result code version (ECMAScript standard).
     "target": "es5",
+    // JSX (React components) constructions allowed ("return(<div>Bla-bla...</div>").
     "jsx": "react",
+    // Compiler processes not only 'ts'-files, but also 'js'-files.
     "allowJs": true,
-    "moduleResolution": "node"
+    // Module file search mode (node/classic).
+    "moduleResolution": "node",
+    // Property allows imports.
+    "esModuleInterop": true,
+    // Property allows statement "import * as React from 'react'" to be rewritten as "import React from 'react'".
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }
-

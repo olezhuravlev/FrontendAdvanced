@@ -10,7 +10,7 @@
     // Result code version (ECMAScript standard).
     "target": "es5",
     // JSX (React components) constructions allowed ("return(<div>Bla-bla...</div>").
-    "jsx": "react",
+    "jsx": "react-jsx",
     // Compiler processes not only 'ts'-files, but also 'js'-files.
     "allowJs": true,
     // Module file search mode (node/classic).

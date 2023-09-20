@@ -37,3 +37,10 @@ $ touch config/build/types/config.ts
 $ touch config/build/buildDev.server.ts
 $ npm i -D webpack-dev-server
 ````
+
+````bash
+$ npm i react react-dom @types/react @types/react-dom
+$ mkdir src/components
+$ npm i -D sass-loader sass webpack style-loader css-loader
+$ npm i -D mini-css-extract-plugin
+````

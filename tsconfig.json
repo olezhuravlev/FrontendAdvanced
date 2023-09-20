@@ -15,6 +15,8 @@
     "allowJs": true,
     // Module file search mode (node/classic).
     "moduleResolution": "node",
+    // Base directory to resolve non-relative module names.
+    "baseUrl": ".",
     // Property allows imports.
     "esModuleInterop": true,
     // Property allows statement "import * as React from 'react'" to be rewritten as "import React from 'react'".

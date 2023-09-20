@@ -23,3 +23,12 @@ $ touch tsconfig.json
 ````bash
 $ npm i -D ts-node @types/node @types/webpack @types/webpack-dev-server
 ````
+
+````bash
+$ mkdir config/build config/eslint config/jest config/build/types -p
+$ touch config/build/buildPlugins.ts
+$ touch config/build/buildLoaders.ts 
+$ touch config/build/buildResolvers.ts
+$ touch config/build/buildWebpackConfig.ts
+$ touch config/build/types/config.ts
+````

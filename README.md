@@ -39,7 +39,8 @@ $ npm i -D webpack-dev-server
 ````
 
 ````bash
-$ npm i react react-dom @types/react @types/react-dom
+$ npm i react react-dom
+$ npm i -D @types/react @types/react-dom
 $ mkdir src/components
 $ npm i -D sass-loader sass webpack style-loader css-loader
 $ npm i -D mini-css-extract-plugin
@@ -48,8 +49,18 @@ $ npm i -D mini-css-extract-plugin
 ````bash
 $ npm i react-router-dom
 $ npm i -D @types/react-router-dom
-
 $ mkdir src/pages/AboutPage src/pages/MainPage -p
 $ touch src/pages/AboutPage/AboutPage.tsx src/pages/MainPage/MainPage.tsx
 $ touch src/pages/AboutPage/AboutPage.async.tsx src/pages/MainPage/MainPage.async.tsx
+````
+
+````bash
+$ mkdir src/styles
+$ touch src/styles/index.scss src/styles/reset.scss
+
+$ mkdir src/styles/variables
+$ touch src/styles/variables/global.scss
+
+$ mkdir src/styles/themes
+$ touch src/styles/themes/dark.scss src/styles/themes/normal.css
 ````

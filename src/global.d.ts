@@ -1,4 +1,4 @@
-// Global types declaration.
+// Global types declaration - allows to import SCSS files to typescript (TSX) file.
 
 declare module "*.scss" {
 

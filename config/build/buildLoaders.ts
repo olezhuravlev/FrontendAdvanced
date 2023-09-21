@@ -30,8 +30,10 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                     }
                 }
             },
-            // Compiles Sass to CSS
-            "sass-loader",
+            // Compiles SASS to CSS
+            {
+                loader: "sass-loader",
+            }
         ],
     }
 

@@ -1,7 +1,6 @@
-// @flow
 import * as React from 'react';
 import {useState} from 'react';
-import "./Counter.scss"
+import css from "./Counter.module.scss";
 
 type Props = {};
 
@@ -11,7 +10,7 @@ export function Counter(props: Props) {
         setCount(count + 1);
     }
     return (
-        <div>
+        <div className={css.btn}>
             <h1>{count}</h1>
             <button onClick={increment}>Increment</button>
         </div>

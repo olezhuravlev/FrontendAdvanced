@@ -5,6 +5,7 @@ import {MainPageAsync} from "./pages/MainPage/MainPage.async";
 import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
 import {useTheme} from "./theme/useTheme";
 import "./styles/index.scss"
+import {myClassNames} from "./helpers/classNames/classNames";
 
 type Props = {};
 
@@ -13,7 +14,7 @@ export function App(props: Props) {
     const {theme, toggleTheme} = useTheme();
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={myClassNames("app", {}, [theme])}>
             <button onClick={toggleTheme}>Toggle Theme</button>
             <p></p>
             <Link to={"/"}>Main</Link>

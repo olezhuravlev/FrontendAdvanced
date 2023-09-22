@@ -24,7 +24,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             rules: buildLoaders(options),
         },
         // For not to specify specified extensions for imports.
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         // Plugins' configs.
         plugins: buildPlugins(options),
         devtool: isDev ? "inline-source-map" : undefined,

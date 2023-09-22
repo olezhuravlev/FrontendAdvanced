@@ -1,11 +1,11 @@
 import React, {Suspense} from 'react';
-import {Counter} from "./components/Counter";
 import {Link, Route, Routes} from "react-router-dom";
-import {MainPageAsync} from "./pages/MainPage/MainPage.async";
-import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
-import {useTheme} from "./theme/useTheme";
+import {MainPage} from "pages/MainPage";
+import {AboutPage} from "pages/AboutPage";
+import {useTheme} from "app/providers/ThemeProvider";
 import "./styles/index.scss"
-import {myClassNames} from "./helpers/classNames/classNames";
+import {myClassNames} from "shared/lib/classNames/classNames";
+
 
 type Props = {};
 
@@ -21,12 +21,11 @@ export function App(props: Props) {
             <Link to={"/about"}>About</Link>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path={"/"} element={<MainPageAsync/>}/>
-                    <Route path={"/about"} element={<AboutPageAsync/>}/>
+                    <Route path={"/"} element={<MainPage/>}/>
+                    <Route path={"/about"} element={<AboutPage/>}/>
                 </Routes>
             </Suspense>
             Application!
-            <Counter/>
         </div>
     );
 };

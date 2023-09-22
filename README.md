@@ -64,3 +64,39 @@ $ touch src/styles/variables/global.scss
 $ mkdir src/styles/themes
 $ touch src/styles/themes/dark.scss src/styles/themes/normal.css
 ````
+
+
+````bash
+$ mkdir src/app src/widgets src/features src/shared src/entities
+$ mkdir src/app/types
+$ mv src/App.tsx src/app
+$ mv src/styles src/app
+$ mv src/global.d.ts src/app/types
+$ rm src/components -r
+
+$ mkdir src/app/providers/ThemeProvider/ui -p
+$ mv src/theme/ThemeProvider.tsx src/app/providers/ThemeProvider/ui
+$ touch src/app/providers/ThemeProvider/intex.tsx
+$ mkdir src/shared/config
+$ mv src/theme src/shared/config
+
+$ mkdir src/app/providers/ThemeProvider/lib
+$ mv src/shared/config/theme/useTheme.tsx src/app/providers/ThemeProvider/lib
+$ mv src/shared/config/theme/ThemeContext.tsx src/app/providers/ThemeProvider/lib
+
+$ rm src/shared/config/theme -r
+
+$ touch src/pages/AboutPage/index.ts
+$ mkdir src/pages/AboutPage/ui
+$ mv src/pages/AboutPage/AboutPage.tsx src/pages/AboutPage/ui
+$ mv src/pages/AboutPage/AboutPage.async.tsx src/pages/AboutPage/ui
+
+$ touch src/pages/MainPage/index.ts
+$ mkdir src/pages/MainPage/ui
+$ mv src/pages/MainPage/MainPage.tsx src/pages/MainPage/ui
+$ mv src/pages/MainPage/MainPage.async.tsx src/pages/MainPage/ui
+
+$ mkdir src/shared/lib
+$ mv src/helpers/classNames src/shared/lib
+$ rm src/helpers -r
+````

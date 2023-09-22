@@ -16,7 +16,13 @@
     // Module file search mode (node/classic).
     "moduleResolution": "node",
     // Base directory to resolve non-relative module names.
-    //"baseUrl": ".",
+    "baseUrl": ".",
+    // Folder, relative to which absolute paths will be specified.
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    },
     // Property allows imports.
     "esModuleInterop": true,
     // Property allows statement "import * as React from 'react'" to be rewritten as "import React from 'react'".

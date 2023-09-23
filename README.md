@@ -100,3 +100,12 @@ $ mkdir src/shared/lib
 $ mv src/helpers/classNames src/shared/lib
 $ rm src/helpers -r
 ````
+
+````bash
+$ mkdir src/app/providers/router/ui
+$ touch src/app/providers/router/index.ts
+$ touch src/app/providers/router/ui/AppRouter.tsx
+$ mkdir src/shared/config/routeConfig   
+$ touch src/shared/config/routeConfig/routeConfig.tsx
+````
+

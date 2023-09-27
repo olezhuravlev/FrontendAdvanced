@@ -65,7 +65,6 @@ $ mkdir src/styles/themes
 $ touch src/styles/themes/dark.scss src/styles/themes/normal.css
 ````
 
-
 ````bash
 $ mkdir src/app src/widgets src/features src/shared src/entities
 $ mkdir src/app/types
@@ -114,5 +113,17 @@ $ mkdir src/widgets/Navbar/ui -p
 $ touch src/widgets/Navbar/index.ts src/widgets/Navbar/ui/Navbar.tsx src/widgets/Navbar/ui/Navbar.module.scss
 $ mkdir src/shared/ui/Applink -p
 $ touch src/shared/ui/Applink/Applink.tsx src/shared/ui/Applink/Applink.module.css 
+````
+
+````bash
+$ npm i -D @svgr/webpack
+$ npm i -D file-loader
+
+$ mkdir src/shared/ui/ThemeSwitcher/ui -p
+$ touch src/shared/ui/ThemeSwitcher/index.tsx src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.modules.scss
+$ mkdir src/shared/assets/icons -p
+
+$ mkdir src/shared/ui/Button
+$ touch src/shared/ui/Button/Button.tsx src/shared/ui/Button/Button.module.scss
 ````
 

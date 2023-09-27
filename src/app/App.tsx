@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import {useTheme} from "app/providers/ThemeProvider";
 import "./styles/index.scss"
 import {myClassNames} from "shared/lib/classNames/classNames";
 import {AppRouter} from "app/providers/router";
+import {Navbar} from "widgets/Navbar";
 
 
 type Props = {};
@@ -14,11 +14,9 @@ export function App(props: Props) {
 
     return (
         <div className={myClassNames("app", {}, [theme])}>
-            <button onClick={toggleTheme}>Toggle Theme</button>
-            <p></p>
-            <Link to={"/"}>Main</Link>
-            <Link to={"/about"}>About</Link>
+            <Navbar/>
             <AppRouter/>
+            <button onClick={toggleTheme}>Toggle Theme</button>
         </div>
     );
 };

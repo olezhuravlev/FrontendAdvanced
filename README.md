@@ -109,3 +109,10 @@ $ mkdir src/shared/config/routeConfig
 $ touch src/shared/config/routeConfig/routeConfig.tsx
 ````
 
+````bash
+$ mkdir src/widgets/Navbar/ui -p
+$ touch src/widgets/Navbar/index.ts src/widgets/Navbar/ui/Navbar.tsx src/widgets/Navbar/ui/Navbar.module.scss
+$ mkdir src/shared/ui/Applink -p
+$ touch src/shared/ui/Applink/Applink.tsx src/shared/ui/Applink/Applink.module.css 
+````
+

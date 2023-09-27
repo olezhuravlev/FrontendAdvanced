@@ -127,3 +127,7 @@ $ mkdir src/shared/ui/Button
 $ touch src/shared/ui/Button/Button.tsx src/shared/ui/Button/Button.module.scss
 ````
 
+````bash
+$ mkdir src/widgets/Sidebar/ui/Sidebar -p
+$ touch src/widgets/Sidebar/index.ts src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
+````

@@ -131,3 +131,17 @@ $ touch src/shared/ui/Button/Button.tsx src/shared/ui/Button/Button.module.scss
 $ mkdir src/widgets/Sidebar/ui/Sidebar -p
 $ touch src/widgets/Sidebar/index.ts src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
 ````
+
+````bash
+$ npm i react-i18next i18next
+$ npm i i18next-http-backend i18next-browser-languagedetector
+
+$ mkdir src/shared/config/i18n
+$ touch src/shared/config/i18n/i18n.ts
+
+$ mkdir public/locales/ru public/locales/en -p
+$ touch public/locales/ru/translation.json public/locales/en/translation.json
+
+$ mkdir src/shared/ui/LangSwitcher/ui -p
+$ touch src/shared/ui/LangSwitcher/index.tsx src/shared/ui/LangSwitcher/ui/LangSwitcher.tsx src/shared/ui/LangSwitcher/ui/LangSwitcher.module.scss
+````

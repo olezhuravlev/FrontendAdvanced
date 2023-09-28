@@ -1,14 +1,17 @@
 import * as React from 'react';
+import {useTranslation} from "react-i18next";
 
 type Props = {};
 
 export function AboutPage(props: Props) {
+
+    const {t} = useTranslation("about");
+
     return (
         <div>
-            My About page!
+            {t("about")}
         </div>
     );
 };
 
 export default AboutPage;
-

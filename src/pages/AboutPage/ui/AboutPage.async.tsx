@@ -1,6 +1,6 @@
-import {lazy} from "react";
+import { lazy } from 'react'
 
-export const AboutPageAsync = lazy(() => import("./AboutPage"));
+export const AboutPageAsync = lazy(async () => await import('./AboutPage'))
 // const executor = function (resolveFunc: any, rejectFunc: any) {
 //     setTimeout(function () {
 //         return resolveFunc(import("./AboutPage"));

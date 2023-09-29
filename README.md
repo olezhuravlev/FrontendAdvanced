@@ -150,3 +150,25 @@ $ touch src/shared/ui/LangSwitcher/index.tsx src/shared/ui/LangSwitcher/ui/LangS
 $ npm i -D babel-loader @babel/core @babel/preset-env
 $ touch .babelrc
 ````
+
+````bash
+$ npm i -D eslint
+````
+
+````bash
+$ npm init @eslint/config
+✔ How would you like to use ESLint? · style
+✔ What type of modules does your project use? · esm
+✔ Which framework does your project use? · react
+✔ Does your project use TypeScript? · Yes
+✔ Where does your code run? · browser
+✔ How would you like to define a style for your project? · guide
+✔ Which style guide do you want to follow? · standard-with-typescript
+✔ What format do you want your config file to be in? · JavaScript
+✔ Would you like to install them now? · Yes
+✔ Which package manager do you want to use? · npm
+````
+
+````bash
+$ eslint "**/*.{ts,tsx}"
+````

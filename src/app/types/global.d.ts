@@ -1,23 +1,21 @@
 // Global types declaration - allows to import SCSS files to typescript (TSX) file.
 
-declare module "*.scss" {
+declare module '*.scss' {
 
-    interface IClassNames {
-        [className: string]: string
-    }
+    type IClassNames = Record<string, string>
 
-    const classNames: IClassNames;
-    export = classNames;
+    const classNames: IClassNames
+    export = classNames
 }
 
-declare module "*.svg" {
-    import React from "react";
-    const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
-    export default SVG;
+declare module '*.svg' {
+    import type React from 'react'
+    const SVG: React.VFC<React.SVGProps<SVGSVGElement>>
+    export default SVG
 }
 
-declare module "*.png";
-declare module "*.jpg";
-declare module "*.jpeg";
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.jpeg';
 
-declare const __IS_DEV__: boolean;
+declare const IS_DEV: boolean

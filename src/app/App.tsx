@@ -1,21 +1,17 @@
-import React, {Suspense} from 'react';
-import "./styles/index.scss"
-import {myClassNames} from "shared/lib/classNames/classNames";
-import {AppRouter} from "app/providers/router";
-import {Navbar} from "widgets/Navbar";
-import {useTheme} from "app/providers/ThemeProvider";
-import {Sidebar} from "widgets/Sidebar";
+import React, { Suspense } from 'react'
+import './styles/index.scss'
+import { myClassNames } from 'shared/lib/classNames/classNames'
+import { AppRouter } from 'app/providers/router'
+import { Navbar } from 'widgets/Navbar'
+import { useTheme } from 'app/providers/ThemeProvider'
+import { Sidebar } from 'widgets/Sidebar'
 
-
-type Props = {};
-
-export function App(props: Props) {
-
-    const {theme} = useTheme();
+export function App () {
+    const { theme } = useTheme()
 
     return (
-        <div className={myClassNames("app", {}, [theme])}>
-            <Suspense fallback={""}>
+        <div className={myClassNames('app', {}, [theme])}>
+            <Suspense fallback={''}>
                 <Navbar/>
                 <div className="content-page">
                     <Sidebar/>
@@ -23,5 +19,5 @@ export function App(props: Props) {
                 </div>
             </Suspense>
         </div>
-    );
-};
+    )
+}

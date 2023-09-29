@@ -5,4 +5,4 @@
 // export {MainPageAsync as MainPage};
 
 // A concise way to export:
-export {MainPageAsync as MainPage} from "./ui/MainPage.async";
+export { MainPageAsync as MainPage } from './ui/MainPage.async'

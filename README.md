@@ -145,3 +145,8 @@ $ touch public/locales/ru/translation.json public/locales/en/translation.json
 $ mkdir src/shared/ui/LangSwitcher/ui -p
 $ touch src/shared/ui/LangSwitcher/index.tsx src/shared/ui/LangSwitcher/ui/LangSwitcher.tsx src/shared/ui/LangSwitcher/ui/LangSwitcher.module.scss
 ````
+
+````bash
+$ npm i -D babel-loader @babel/core @babel/preset-env
+$ touch .babelrc
+````

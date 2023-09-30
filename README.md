@@ -179,3 +179,28 @@ $ touch .stylelintrc.json
 $ npx stylelint "**/*.scss"
 $ npm i -D eslint-plugin-i18next
 ````
+
+````bash
+$ npm i -D jest jest-environment-jsdom @types/jest @babel/preset-typescript
+````
+
+````bash
+$ jest --init
+
+The following questions will help Jest to create a suitable configuration for your project
+
+✔ Would you like to use Jest when running "test" script in "package.json"? … yes
+✔ Would you like to use Typescript for the configuration file? … yes
+✔ Choose the test environment that will be used for testing › jsdom (browser-like)
+✔ Do you want Jest to add coverage reports? … yes
+✔ Which provider should be used to instrument code for coverage? › babel
+✔ Automatically clear mock calls, instances, contexts and results before every test? … yes
+
+✏️  Modified /home/oleg/MyProjects/FrontendAdvanced/package.json
+
+📝  Configuration file created at /home/oleg/MyProjects/FrontendAdvanced/jest.config.ts
+````
+
+````bash
+$ mv jest.config.ts config/jest
+````

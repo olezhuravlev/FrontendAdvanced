@@ -11,6 +11,7 @@ module.exports = {
     "extends": [
         "standard-with-typescript",
         "plugin:react/recommended",
+        "plugin:i18next/recommended",
         // "plugin:react/jsx-runtime"
     ],
     "overrides": [
@@ -33,6 +34,7 @@ module.exports = {
     "plugins": [
         "react",
         "@typescript-eslint",
+        "i18next"
     ],
     "rules": {
         "react/jsx-indent": [2, 4],
@@ -43,5 +45,6 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": 0,
         "@typescript-eslint/no-var-requires": 0,
         "@typescript-eslint/no-floating-promises": 0,
+        "i18next/no-literal-string": ["error", {markupOnly: true}]
     }
 }

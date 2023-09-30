@@ -9,6 +9,6 @@ export function AboutPage () {
             {t('about')}
         </div>
     )
-};
+}
 
 export default AboutPage

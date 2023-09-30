@@ -1,4 +1,7 @@
 {
   "switch-locale": "En",
-  "title": "Some title"
+  "title": "Some title",
+  "main-page": "Main",
+  "about-page": "About",
+  "toggle": "Toggle"
 }

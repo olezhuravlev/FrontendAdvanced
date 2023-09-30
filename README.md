@@ -172,3 +172,10 @@ $ npm init @eslint/config
 ````bash
 $ eslint "**/*.{ts,tsx}"
 ````
+
+````bash
+$ npm i -D stylelint stylelint-config-standard-scss
+$ touch .stylelintrc.json
+$ npx stylelint "**/*.scss"
+$ npm i -D eslint-plugin-i18next
+````

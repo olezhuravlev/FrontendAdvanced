@@ -204,3 +204,8 @@ The following questions will help Jest to create a suitable configuration for yo
 ````bash
 $ mv jest.config.ts config/jest
 ````
+
+````bash
+$ npm i axios
+#$ npm i -D jest-mock-axios
+````

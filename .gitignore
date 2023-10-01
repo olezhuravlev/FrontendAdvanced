@@ -2,5 +2,6 @@
 node_modules/
 target/
 coverage/
+__snapshots__/
 
 *.iml

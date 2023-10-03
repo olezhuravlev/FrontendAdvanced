@@ -209,3 +209,10 @@ $ mv jest.config.ts config/jest
 $ npm i axios
 #$ npm i -D jest-mock-axios
 ````
+
+
+````bash
+$ npm init wdio . -- --yes
+# $ npx wdio run ./wdio.conf.js
+$ npx wdio run ./wdio.conf.ts
+````

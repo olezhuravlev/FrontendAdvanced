@@ -4,5 +4,6 @@
   "no-clients": "No clients",
   "fetch-customers": "Fetch customers",
   "add-customer": "Add customer",
-  "remove-customer": "Del"
+  "remove-customer": "Del",
+  "invest": "Invest!"
 }

@@ -4,7 +4,7 @@ import { myClassNames } from 'shared/lib/classNames/classNames'
 import cls from './Cash.module.scss'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
-import { addCustomerAction, type Customer, removeCustomerAction } from 'store/customerReducer'
+import { addCustomerAction, addCustomersAction, type Customer, removeCustomerAction } from 'store/customerReducer'
 import { addCashAction, withdrawCashAction } from 'store/cashReducer'
 import { fetchCustomers } from 'asyncActions/customers'
 
@@ -55,6 +55,13 @@ export const Cash = ({ className }: CashProps) => {
         setValue(Number(e.target.value))
     }
 
+    const startInvestment = (e: any) => {
+        console.log('onClick:', e)
+        dispatch(addCashAction(100))
+        dispatch(withdrawCashAction(50))
+        dispatch(addCustomersAction([{ id: 0, name: 'Investor #0' }]))
+    }
+
     return (
         <div className={myClassNames(cls.Cash, {}, [className])}>
             <input className={cls.CashInput} onChange={inputOnChange}/>
@@ -74,6 +81,7 @@ export const Cash = ({ className }: CashProps) => {
                     </div>
                 )}
                 </div>}
+            <button className={cls.CashInput} onClick={startInvestment}>{t('invest')}</button>
         </div>
     )
 }

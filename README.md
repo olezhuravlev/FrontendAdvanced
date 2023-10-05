@@ -255,3 +255,9 @@ $ mkdir src/asyncActions -p
 $ touch src/asyncActions/customers.js
 ````
 
+````bash
+$ npm i redux-saga
+
+$ mkdir src/asyncActions/saga
+$ touch src/asyncActions/saga/cashSaga.js src/asyncActions/saga/userSaga.js src/asyncActions/saga/main.js
+````

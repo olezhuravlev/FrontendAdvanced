@@ -12,8 +12,8 @@ export interface CashAction extends Action {
     payload: number
 }
 
-const ADD_CASH = 'ADD_CASH'
-const WITHDRAW_CASH = 'WITHDRAW_CASH'
+export const ADD_CASH = 'ADD_CASH'
+export const WITHDRAW_CASH = 'WITHDRAW_CASH'
 
 export const cashReducer = (state: State = defaultState, action: CashAction) => {
     switch (action.type) {

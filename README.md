@@ -216,3 +216,19 @@ $ npm init wdio . -- --yes
 # $ npx wdio run ./wdio.conf.js
 $ npx wdio run ./wdio.conf.ts
 ````
+
+
+````bash
+$ mkdir src/pages/NotFoundPage/ui -p
+$ touch src/pages/NotFoundPage/ui/NotFoundPage.tsx src/pages/NotFoundPage/ui/NotFoundPage.module.scss src/pages/NotFoundPage/index.ts
+
+$ mkdir src/widgets/PageLoader/ui -p
+$ touch src/widgets/PageLoader/ui/PageLoader.tsx src/widgets/PageLoader/ui/PageLoader.module.scss src/widgets/PageLoader/index.ts
+
+$ mkdir src/widgets/Loader/ui -p 
+$ touch src/widgets/Loader/ui/Loader.tsx src/widgets/Loader/ui/Loader.module.scss src/widgets/Loader/index.ts
+````
+
+> Collection of loaders: https://loading.io/css
+
+

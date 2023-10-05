@@ -3,5 +3,6 @@
   "title": "Some title",
   "main-page": "Main",
   "about-page": "About",
-  "toggle": "Toggle"
+  "toggle": "Toggle",
+  "not-found-page": "Page not found"
 }

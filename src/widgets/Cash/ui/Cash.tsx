@@ -4,7 +4,7 @@ import { myClassNames } from 'shared/lib/classNames/classNames'
 import cls from './Cash.module.scss'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
-import { addCustomerAction, type Customer, removeCustomerAction } from 'store/customerReducer'
+import { addCustomerAction, addCustomersAction, type Customer, removeCustomerAction } from 'store/customerReducer'
 import { addCashAction, withdrawCashAction } from 'store/cashReducer'
 
 interface CashProps {
@@ -30,17 +30,23 @@ export const Cash = ({ className }: CashProps) => {
     }
 
     const addCustomer = (name: string) => {
-        console.log('ADD CUSTOMER', name)
         const customer = {
             id: Date.now(),
             name
         }
-        dispatch(addCustomerAction(customer))
+        console.log('ADD CUSTOMER', name)
+        dispatch(addCustomerAction([customer]))
+    }
+
+    const fetchCustomers = () => {
+        const customers: Customer[] = [{ id: 1, name: '111' }, { id: 2, name: '222' }]
+        console.log('FETCH CUSTOMERS', customers)
+        dispatch(addCustomersAction(customers))
     }
 
     const removeCustomer = (customerId: Customer) => {
         console.log('REMOVE CUSTOMER', customerId)
-        dispatch(removeCustomerAction(customerId))
+        dispatch(removeCustomerAction([customerId]))
     }
 
     return (
@@ -52,6 +58,9 @@ export const Cash = ({ className }: CashProps) => {
             <button className={cls.CashButtonAdd} onClick={addCash}>{t('add-cash')}</button>
             <button className={cls.CashButtonWithdraw} onClick={withdrawCash}>{t('withdraw-cash')}</button>
             <input className={cls.CashResult} value={cash} readOnly/>
+            <button className={cls.CustomerButtonAdd} onClick={() => {
+                fetchCustomers()
+            }}>{t('fetch-customers')}</button>
             <button className={cls.CustomerButtonAdd} onClick={() => {
                 addCustomer(prompt())
             }}>{t('add-customer')}</button>

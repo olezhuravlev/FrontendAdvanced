@@ -2,6 +2,7 @@
   "add-cash": "Add cash",
   "withdraw-cash": "Withdraw cash",
   "no-clients": "No clients",
+  "fetch-customers": "Fetch customers",
   "add-customer": "Add customer",
   "remove-customer": "Del"
 }

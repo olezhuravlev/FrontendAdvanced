@@ -2,6 +2,7 @@
   "add-cash": "Внести наличные",
   "withdraw-cash": "Снять наличные",
   "no-clients": "Клиентов нет",
+  "fetch-customers": "Загрузить клиентов",
   "add-customer": "Добавить клиента",
   "remove-customer": "Удал."
 }

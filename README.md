@@ -248,3 +248,10 @@ $ touch src/store/index.js touch src/store/cashReducer.js src/store/customerRedu
 > ````
 > And install Redux DevTools extension for Chrome.
 
+````bash
+$ npm i redux-thunk
+
+$ mkdir src/asyncActions -p
+$ touch src/asyncActions/customers.js
+````
+

@@ -210,13 +210,11 @@ $ npm i axios
 #$ npm i -D jest-mock-axios
 ````
 
-
 ````bash
 $ npm init wdio . -- --yes
 # $ npx wdio run ./wdio.conf.js
 $ npx wdio run ./wdio.conf.ts
 ````
-
 
 ````bash
 $ mkdir src/pages/NotFoundPage/ui -p
@@ -231,4 +229,22 @@ $ touch src/widgets/Loader/ui/Loader.tsx src/widgets/Loader/ui/Loader.module.scs
 
 > Collection of loaders: https://loading.io/css
 
+
+````bash
+$ npm i redux react-redux
+````
+
+````bash
+$ mkdir src/widgets/Cash/ui -p
+$ touch src/widgets/Cash/ui/Cash.tsx src/widgets/Cash/ui/Cash.module.scss src/widgets/Cash/index.ts
+
+$ mkdir src/store
+$ touch src/store/index.js touch src/store/cashReducer.js src/store/customerReducer.js
+````
+
+> DevTools installation
+> ````bash
+> $ npm i redux-devtools-extension
+> ````
+> And install Redux DevTools extension for Chrome.
 

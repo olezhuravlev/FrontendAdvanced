@@ -1,0 +1,63 @@
+.Cash {
+  background-color: #737d7d;
+}
+
+.CashButtonAdd {
+  padding: 0 5px;
+  margin: 5px;
+  color: #fff;
+  background-color: #5c73bb;
+  border-radius: 5px;
+}
+
+.CashButtonWithdraw {
+  padding: 0 5px;
+  margin: 5px;
+  color: #fff;
+  background-color: #e69e9e;
+  border-radius: 5px;
+}
+
+.CashInput {
+  padding: 0 5px;
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+}
+
+.CashResult {
+  padding: 0 5px;
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+  background: lightgray;
+}
+
+.Customers {
+  padding: 0;
+}
+
+.Customer {
+  font-size: 1rem;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CustomerButtonAdd {
+  padding: 0 5px;
+  margin: 5px;
+  color: #fff;
+  background-color: #5c73bb;
+  border-radius: 5px;
+}
+
+.CustomerButtonRemove {
+  padding: 0 5px;
+  margin: 5px;
+  color: #fff;
+  background-color: #e69e9e;
+  border-radius: 5px;
+}

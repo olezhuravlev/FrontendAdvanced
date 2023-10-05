@@ -4,8 +4,9 @@ import { myClassNames } from 'shared/lib/classNames/classNames'
 import cls from './Cash.module.scss'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
-import { addCustomerAction, addCustomersAction, type Customer, removeCustomerAction } from 'store/customerReducer'
+import { addCustomerAction, type Customer, removeCustomerAction } from 'store/customerReducer'
 import { addCashAction, withdrawCashAction } from 'store/cashReducer'
+import { fetchCustomers } from 'asyncActions/customers'
 
 interface CashProps {
     className?: string
@@ -29,7 +30,8 @@ export const Cash = ({ className }: CashProps) => {
         dispatch(withdrawCashAction(value))
     }
 
-    const addCustomer = (name: string) => {
+    const addCustomer = () => {
+        const name = prompt()
         const customer = {
             id: Date.now(),
             name
@@ -38,10 +40,9 @@ export const Cash = ({ className }: CashProps) => {
         dispatch(addCustomerAction([customer]))
     }
 
-    const fetchCustomers = () => {
-        const customers: Customer[] = [{ id: 1, name: '111' }, { id: 2, name: '222' }]
+    const addCustomers = () => {
+        fetchCustomers()(dispatch)
         console.log('FETCH CUSTOMERS', customers)
-        dispatch(addCustomersAction(customers))
     }
 
     const removeCustomer = (customerId: Customer) => {
@@ -49,21 +50,19 @@ export const Cash = ({ className }: CashProps) => {
         dispatch(removeCustomerAction([customerId]))
     }
 
+    const inputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log('VALUE:', e.target.value)
+        setValue(Number(e.target.value))
+    }
+
     return (
         <div className={myClassNames(cls.Cash, {}, [className])}>
-            <input className={cls.CashInput} onChange={e => {
-                setValue(Number(e.target.value))
-                console.log('VALUE:', e.target.value)
-            }}/>
+            <input className={cls.CashInput} onChange={inputOnChange}/>
             <button className={cls.CashButtonAdd} onClick={addCash}>{t('add-cash')}</button>
             <button className={cls.CashButtonWithdraw} onClick={withdrawCash}>{t('withdraw-cash')}</button>
             <input className={cls.CashResult} value={cash} readOnly/>
-            <button className={cls.CustomerButtonAdd} onClick={() => {
-                fetchCustomers()
-            }}>{t('fetch-customers')}</button>
-            <button className={cls.CustomerButtonAdd} onClick={() => {
-                addCustomer(prompt())
-            }}>{t('add-customer')}</button>
+            <button className={cls.CustomerButtonAdd} onClick={addCustomers}>{t('fetch-customers')}</button>
+            <button className={cls.CustomerButtonAdd} onClick={addCustomer}>{t('add-customer')}</button>
             {customers.length === 0
                 ? <div className={cls.Customer}>{t('no-clients')}</div>
                 : <div> {customers.map(customer =>

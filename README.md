@@ -261,3 +261,10 @@ $ npm i redux-saga
 $ mkdir src/asyncActions/saga
 $ touch src/asyncActions/saga/cashSaga.js src/asyncActions/saga/userSaga.js src/asyncActions/saga/main.js
 ````
+
+````bash
+$ touch src/types                    
+$ mkdir src/types 
+
+$ touch src/store/rootReducer.tsx
+````

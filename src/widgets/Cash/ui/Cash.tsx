@@ -3,10 +3,11 @@ import { useState } from 'react'
 import { myClassNames } from 'shared/lib/classNames/classNames'
 import cls from './Cash.module.scss'
 import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addCustomerAction, addCustomersAction, type Customer, removeCustomerAction } from 'store/customerReducer'
 import { addCashAction, withdrawCashAction } from 'store/cashReducer'
 import { fetchCustomers } from 'asyncActions/customers'
+import { useTypedSelector } from 'hooks/useTypedSelector'
 
 interface CashProps {
     className?: string
@@ -15,8 +16,8 @@ interface CashProps {
 export const Cash = ({ className }: CashProps) => {
     const { t } = useTranslation('cash')
 
-    const cash = useSelector<any, number>(state => state.cash.cash)
-    const customers = useSelector<any, Customer[]>(state => state.customers.customers)
+    const { cash } = useTypedSelector(state => state.cash)
+    const { customers } = useTypedSelector(state => state.customers)
 
     const [value, setValue] = useState(cash)
 

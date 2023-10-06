@@ -1,5 +1,6 @@
 import { put, takeEvery } from 'redux-saga/effects'
-import { ADD_CASH, addCashAction, WITHDRAW_CASH, withdrawCashAction } from 'store/cashReducer'
+import { addCashAction, withdrawCashAction } from 'store/cashReducer'
+import { CashActions } from 'types/declarations'
 
 const delay = async (ms) => await new Promise(resolve => setTimeout(resolve, ms))
 
@@ -14,6 +15,6 @@ function * decrementWorker () {
 }
 
 export function * cashWatcher () {
-    yield takeEvery(ADD_CASH, incrementWorker)
-    yield takeEvery(WITHDRAW_CASH, decrementWorker)
+    yield takeEvery(CashActions.ADD_CASH, incrementWorker)
+    yield takeEvery(CashActions.WITHDRAW_CASH, decrementWorker)
 }

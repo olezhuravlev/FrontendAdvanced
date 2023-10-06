@@ -1,26 +1,15 @@
-import { type Action } from 'redux'
+import { type CashAction, CashActions, type CashState } from 'types/declarations'
 
-interface State {
-    cash: number
-}
-
-const defaultState: State = {
+const defaultState: CashState = {
     cash: 0
 }
 
-export interface CashAction extends Action {
-    payload: number
-}
-
-export const ADD_CASH = 'ADD_CASH'
-export const WITHDRAW_CASH = 'WITHDRAW_CASH'
-
-export const cashReducer = (state: State = defaultState, action: CashAction) => {
+export const cashReducer = (state: CashState = defaultState, action: CashAction): CashState => {
     switch (action.type) {
-        case ADD_CASH:
+        case CashActions.ADD_CASH:
             console.log('REDUCER state:', state.cash, 'ADD_CASH payload:', action.payload)
             return { ...state, cash: state.cash + action.payload }
-        case WITHDRAW_CASH:
+        case CashActions.WITHDRAW_CASH:
             console.log('REDUCER state:', state.cash, 'WITHDRAW_CASH payload:', action.payload)
             return { ...state, cash: state.cash - action.payload }
         default:
@@ -28,5 +17,5 @@ export const cashReducer = (state: State = defaultState, action: CashAction) => 
     }
 }
 
-export const addCashAction = (payload: number) => ({ type: ADD_CASH, payload })
-export const withdrawCashAction = (payload: number) => ({ type: WITHDRAW_CASH, payload })
+export const addCashAction = (payload: number) => ({ type: CashActions.ADD_CASH, payload })
+export const withdrawCashAction = (payload: number) => ({ type: CashActions.WITHDRAW_CASH, payload })

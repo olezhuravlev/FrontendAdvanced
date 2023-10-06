@@ -1,35 +1,23 @@
-import { type Action } from 'redux'
+import { type CustomerAction, CustomerActions, type CustomerState } from 'types/declarations'
 
 export interface Customer {
     id: number
     name: string
 }
 
-interface State {
-    customers: Customer []
-}
-
-const defaultState: State = {
+const defaultState: CustomerState = {
     customers: [] as Customer []
 }
 
-export interface CustomerAction extends Action {
-    payload: Customer[]
-}
-
-export const ADD_CUSTOMER = 'ADD_CUSTOMER'
-export const ADD_CUSTOMERS = 'ADD_CUSTOMERS'
-const REMOVE_CUSTOMER = 'REMOVE_CUSTOMER'
-
-export const customerReducer = (state = defaultState, action: CustomerAction) => {
+export const customerReducer = (state: CustomerState = defaultState, action: CustomerAction): CustomerState => {
     switch (action.type) {
-        case ADD_CUSTOMERS:
+        case CustomerActions.ADD_CUSTOMERS:
             console.log('ADD_CUSTOMERS', action.payload)
             return { ...state, customers: [...state.customers, ...action.payload] }
-        case ADD_CUSTOMER:
+        case CustomerActions.ADD_CUSTOMER:
             console.log('ADD_CUSTOMER', action.payload)
             return { ...state, customers: [...state.customers, action.payload[0]] }
-        case REMOVE_CUSTOMER:
+        case CustomerActions.REMOVE_CUSTOMER:
             console.log('REMOVE_CUSTOMER', action.payload)
             return { ...state, customers: [...state.customers.filter(customer => customer.id !== action.payload[0].id)] }
         default:
@@ -37,6 +25,6 @@ export const customerReducer = (state = defaultState, action: CustomerAction) =>
     }
 }
 
-export const addCustomerAction = (payload: Customer[]) => ({ type: ADD_CUSTOMER, payload })
-export const addCustomersAction = (payload: Customer[]) => ({ type: ADD_CUSTOMERS, payload })
-export const removeCustomerAction = (payload: Customer[]) => ({ type: REMOVE_CUSTOMER, payload })
+export const addCustomerAction = (payload: Customer[]) => ({ type: CustomerActions.ADD_CUSTOMER, payload })
+export const addCustomersAction = (payload: Customer[]) => ({ type: CustomerActions.ADD_CUSTOMERS, payload })
+export const removeCustomerAction = (payload: Customer[]) => ({ type: CustomerActions.REMOVE_CUSTOMER, payload })
